@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Reading Plan | New Life Church</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    /* --- INTERNAL STYLES FOR HEADER & TABLE --- */
+
+    /* 1. FORCE LEFT ALIGNMENT (Added !important) */
+    .reading-banner {
+      display: flex !important;
+      flex-direction: column !important; /* Stack vertically */
+      justify-content: center !important; /* Center Vertically */
+      align-items: flex-start !important; /* Align Horizontally LEFT */
+      text-align: left !important;
+      
+      padding-left: 5% !important; /* Space from left edge */
+      padding-right: 5% !important;
+      padding-top: 100px !important; /* Pushes content down below Navbar */
+      
+      /* Optional: Darken background specifically for this page so text pops */
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/bible-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .header-content {
+      width: 100%;
+      max-width: 900px;
+      z-index: 2;
+      
+    }
+
+    .header-content h1 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      margin-right: 400px;
+      line-height: 1.1;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    /* 2. COOL VERSE STYLE (Left Aligned) */
+    .verse-highlight {
+      font-size: 1.3rem;
+      color: #f0f0f0;
+      font-style: italic;
+      line-height: 1.6;
+      
+      /* The Cool Box Design */
+      border-left: 5px solid #FFD700; /* Thick Gold Bar */
+      background: linear-gradient(90deg, rgba(255, 215, 0, 0.15) 0%, rgba(0,0,0,0) 100%); /* Fading Gold Gradient */
+      padding: 15px 25px;
+      
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 50px;
+      display: inline-block; /* Fits to text size */
+      max-width: 800px;
+    }
+
+    .verse-highlight span {
+      display: block;
+      margin-top: 8px;
+      color: #FFD700; /* Gold Reference */
+      font-weight: 700;
+      font-style: normal;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .download-text {
+        color: black;
+    }
+
+    /* Mobile Header Adjustments */
+    @media (max-width: 768px) {
+      .reading-banner {
+        align-items: center !important; /* Center on mobile if you prefer */
+        text-align: center !important;
+        padding-top: 120px !important;
+      }
+      .header-content h1 {
+        font-size: 2.5rem;
+      }
+      .verse-highlight {
+        font-size: 1rem;
+        text-align: left; /* Keep verse readable */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="New Life Church" class="logo-img">
+      </a>
+    </div>
+
+    <div class="hamburger" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav>
+      <ul class="nav-links" id="nav-list">
+        <li><a href="index.html">Back to Home</a></li>
+        
+        
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header reading-banner">
+    <div class="header-content">
+      <h1>Rooted in the Word</h1>
+      
+      <div class="verse-highlight">
+        "The Word of the Lord proves true; <br> 
+        He is a shield for all those who take refuge in him."
+        <span>– Psalm 18:30</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="reading-section">
+    <div class="container">
+      
+      <div class="reading-intro">
+        <h2>Read the Bible in a Year</h2>
+        <p>
+          This plan takes you through the entire Bible in one year. The scriptures are divided into seven genres 
+          (Epistles, Law, History, Psalms, Poetry, Prophecy, and Gospels) so you get a balanced diet of the Word every week.
+        </p>
+      </div>
+
+      <div class="table-container">
+        <table class="bible-table">
+          <thead>
+            <tr>
+              <th class="week-col">WEEK</th>
+              <th>SUN <br><span>Epistles</span></th>
+              <th>MON <br><span>The Law</span></th>
+              <th>TUE <br><span>History</span></th>
+              <th>WED <br><span>Psalms</span></th>
+              <th>THU <br><span>Poetry</span></th>
+              <th>FRI <br><span>Prophecy</span></th>
+              <th>SAT <br><span>Gospels</span></th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            </tbody>
+        </table>
+      </div>
+      
+      <div class="download-section">
+        <p class="download-text">Prefer to keep a printed copy?</p>
+        <a href="bible_reading_plan.pdf" download class="download-btn">
+          <i class="fas fa-file-pdf"></i> Download Full PDF
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 New Life Church. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // 1. Mobile Menu Logic
+    const hamburger = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+
+    if(hamburger){
+      hamburger.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+    }
+
+    // 2. Corrected Data Structure
+    const readingPlan = [
+      { week:1,  sun:"Rom 1-2",   mon:"Gen 1-3",   tue:"Josh 1-5",   wed:"Ps 1-2",     thu:"Job 1-2",   fri:"Isa 1-6",   sat:"Matt 1-2" },
+      { week:2,  sun:"Rom 3-4",   mon:"Gen 4-7",   tue:"Josh 6-10",  wed:"Ps 3-5",     thu:"Job 3-4",   fri:"Isa 7-11",  sat:"Matt 3-4" },
+      { week:3,  sun:"Rom 5-6",   mon:"Gen 8-11",  tue:"Josh 11-15", wed:"Ps 6-8",     thu:"Job 5-6",   fri:"Isa 12-17", sat:"Matt 5-7" },
+      { week:4,  sun:"Rom 7-8",   mon:"Gen 12-15", tue:"Josh 16-20", wed:"Ps 9-11",    thu:"Job 7-8",   fri:"Isa 18-22", sat:"Matt 8-10" },
+      { week:5,  sun:"Rom 9-10",  mon:"Gen 16-19", tue:"Josh 21-24", wed:"Ps 12-14",   thu:"Job 9-10",  fri:"Isa 23-28", sat:"Matt 11-13" },
+      { week:6,  sun:"Rom 11-12", mon:"Gen 20-23", tue:"Judg 1-6",   wed:"Ps 15-17",   thu:"Job 11-12", fri:"Isa 29-33", sat:"Matt 14-16" },
+      { week:7,  sun:"Rom 13-14", mon:"Gen 24-27", tue:"Judg 7-11",  wed:"Ps 18-20",   thu:"Job 13-14", fri:"Isa 34-39", sat:"Matt 17-19" },
+      { week:8,  sun:"Rom 15-16", mon:"Gen 28-31", tue:"Judg 12-16", wed:"Ps 21-23",   thu:"Job 15-16", fri:"Isa 40-44", sat:"Matt 20-22" },
+      { week:9,  sun:"1 Cor 1-2", mon:"Gen 32-35", tue:"Judg 17-21", wed:"Ps 24-26",   thu:"Job 17-18", fri:"Isa 45-50", sat:"Matt 23-25" },
+      { week:10, sun:"1 Cor 3-4", mon:"Gen 36-39", tue:"Ruth",       wed:"Ps 27-29",   thu:"Job 19-20", fri:"Isa 51-55", sat:"Matt 26-28" },
+      { week:11, sun:"1 Cor 5-6", mon:"Gen 40-43", tue:"1 Sam 1-5",  wed:"Ps 30-32",   thu:"Job 21-22", fri:"Isa 56-61", sat:"Mark 1-2" },
+      { week:12, sun:"1 Cor 7-8", mon:"Gen 44-47", tue:"1 Sam 6-10", wed:"Ps 33-35",   thu:"Job 23-24", fri:"Isa 62-66", sat:"Mark 3-4" },
+      { week:13, sun:"1 Cor 9-10",mon:"Gen 48-50", tue:"1 Sam 11-15",wed:"Ps 36-38",   thu:"Job 25-26", fri:"Jer 1-6",   sat:"Mark 5-6" },
+      { week:14, sun:"1 Cor 11-12",mon:"Exo 1-4",  tue:"1 Sam 16-20",wed:"Ps 39-41",   thu:"Job 27-28", fri:"Jer 7-11",  sat:"Mark 7-8" },
+      { week:15, sun:"1 Cor 13-14",mon:"Exo 5-8",  tue:"1 Sam 21-25",wed:"Ps 42-44",   thu:"Job 29-30", fri:"Jer 12-16", sat:"Mark 9-10" },
+      { week:16, sun:"1 Cor 15-16",mon:"Exo 9-12", tue:"1 Sam 26-31",wed:"Ps 45-47",   thu:"Job 31-32", fri:"Jer 17-21", sat:"Mark 11-12" },
+      { week:17, sun:"2 Cor 1-3", mon:"Exo 13-16", tue:"2 Sam 1-4",  wed:"Ps 48-50",   thu:"Job 33-34", fri:"Jer 22-26", sat:"Mark 13-14" },
+      { week:18, sun:"2 Cor 4-5", mon:"Exo 17-20", tue:"2 Sam 5-9",  wed:"Ps 51-53",   thu:"Job 35-36", fri:"Jer 27-31", sat:"Mark 15-16" },
+      { week:19, sun:"2 Cor 6-8", mon:"Exo 21-24", tue:"2 Sam 10-14",wed:"Ps 54-56",   thu:"Job 37-38", fri:"Jer 32-36", sat:"Luke 1-2" },
+      { week:20, sun:"2 Cor 9-10",mon:"Exo 25-28", tue:"2 Sam 15-19",wed:"Ps 57-59",   thu:"Job 39-40", fri:"Jer 37-41", sat:"Luke 3-4" },
+      { week:21, sun:"2 Cor 11-13",mon:"Exo 29-32",tue:"2 Sam 20-24",wed:"Ps 60-62",   thu:"Job 41-42", fri:"Jer 42-46", sat:"Luke 5-6" },
+      { week:22, sun:"Gal 1-3",   mon:"Exo 33-36", tue:"1 Kings 1-4",wed:"Ps 63-65",   thu:"Prov 1",    fri:"Jer 47-52", sat:"Luke 7-8" },
+      { week:23, sun:"Gal 4-6",   mon:"Exo 37-40", tue:"1 Kings 5-9",wed:"Ps 66-68",   thu:"Prov 2-3",  fri:"Lam 1-5",   sat:"Luke 9-10" },
+      { week:24, sun:"Eph 1-3",   mon:"Lev 1-3",   tue:"1 Kings 10-13",wed:"Ps 69-71", thu:"Prov 4",    fri:"Ezek 1-6",  sat:"Luke 11-12" },
+      { week:25, sun:"Eph 4-6",   mon:"Lev 4-6",   tue:"1 Kings 14-18",wed:"Ps 72-74", thu:"Prov 5-6",  fri:"Ezek 7-12", sat:"Luke 13-14" },
+      { week:26, sun:"Phil 1-2",  mon:"Lev 7-9",   tue:"1 Kings 19-22",wed:"Ps 75-77", thu:"Prov 7",    fri:"Ezek 13-18",sat:"Luke 15-16" },
+      { week:27, sun:"Phil 3-4",  mon:"Lev 10-12", tue:"2 Kings 1-5",wed:"Ps 78-80",   thu:"Prov 8-9",  fri:"Ezek 19-24",sat:"Luke 17-18" },
+      { week:28, sun:"Col 1-2",   mon:"Lev 13-15", tue:"2 Kings 6-10",wed:"Ps 81-83",  thu:"Prov 10",   fri:"Ezek 25-30",sat:"Luke 19-20" },
+      { week:29, sun:"Col 3-4",   mon:"Lev 16-18", tue:"2 Kings 11-15",wed:"Ps 84-86", thu:"Prov 11-12",fri:"Ezek 31-36",sat:"Luke 21-22" },
+      { week:30, sun:"1 Thes 1-3",mon:"Lev 19-21", tue:"2 Kings 16-20",wed:"Ps 87-89", thu:"Prov 13",   fri:"Ezek 37-42",sat:"Luke 23-24" },
+      { week:31, sun:"1 Thes 4-5",mon:"Lev 22-24", tue:"2 Kings 21-25",wed:"Ps 90-92", thu:"Prov 14-15",fri:"Ezek 43-48",sat:"John 1-2" },
+      { week:32, sun:"2 Thes",    mon:"Lev 25-27", tue:"1 Chron 1-4",wed:"Ps 93-95",   thu:"Prov 16",   fri:"Dan 1-6",   sat:"John 3-4" },
+      { week:33, sun:"1 Tim 1-3", mon:"Num 1-4",   tue:"1 Chron 5-9",wed:"Ps 96-98",   thu:"Prov 17-18",fri:"Dan 7-12",  sat:"John 5-6" },
+      { week:34, sun:"1 Tim 4-6", mon:"Num 5-8",   tue:"1 Chron 10-14",wed:"Ps 99-101",thu:"Prov 19",   fri:"Hos 1-7",   sat:"John 7-9" },
+      { week:35, sun:"2 Tim 1-2", mon:"Num 9-12",  tue:"1 Chron 15-19",wed:"Ps 102-104",thu:"Prov 20-21",fri:"Hos 8-14",  sat:"John 10-12" },
+      { week:36, sun:"2 Tim 3-4", mon:"Num 13-16", tue:"1 Chron 20-24",wed:"Ps 105-107",thu:"Prov 22",   fri:"Joel",      sat:"John 13-15" },
+      { week:37, sun:"Titus",     mon:"Num 17-20", tue:"1 Chron 25-29",wed:"Ps 108-110",thu:"Prov 23-24",fri:"Amos 1-4",  sat:"John 16-18" },
+      { week:38, sun:"Philemon",  mon:"Num 21-24", tue:"2 Chron 1-5",wed:"Ps 111-113", thu:"Prov 25",   fri:"Amos 5-9",  sat:"John 19-21" },
+      { week:39, sun:"Heb 1-4",   mon:"Num 25-28", tue:"2 Chron 6-10",wed:"Ps 114-116",thu:"Prov 26-27",fri:"Obadiah",   sat:"Acts 1-2" },
+      { week:40, sun:"Heb 5-7",   mon:"Num 29-32", tue:"2 Chron 11-15",wed:"Ps 117-118",thu:"Prov 28",  fri:"Jonah",     sat:"Acts 3-4" },
+      { week:41, sun:"Heb 8-10",  mon:"Num 33-36", tue:"2 Chron 16-20",wed:"Ps 119",    thu:"Prov 29-30",fri:"Micah",     sat:"Acts 5-6" },
+      { week:42, sun:"Heb 11-13", mon:"Deut 1-3",  tue:"2 Chron 21-24",wed:"Ps 120-121",thu:"Prov 31",   fri:"Nahum",     sat:"Acts 7-8" },
+      { week:43, sun:"James 1-3", mon:"Deut 4-6",  tue:"2 Chron 25-28",wed:"Ps 122-124",thu:"Eccl 1-2",  fri:"Habakkuk",  sat:"Acts 9-10" },
+      { week:44, sun:"James 4-5", mon:"Deut 7-9",  tue:"2 Chron 29-32",wed:"Ps 125-127",thu:"Eccl 3-4",  fri:"Zephaniah", sat:"Acts 11-12" },
+      { week:45, sun:"1 Peter 1-3",mon:"Deut 10-12",tue:"2 Chron 33-36",wed:"Ps 128-130",thu:"Eccl 5-6", fri:"Haggai",    sat:"Acts 13-14" },
+      { week:46, sun:"1 Peter 4-5",mon:"Deut 13-15",tue:"Ezra 1-5",     wed:"Ps 131-133",thu:"Eccl 7-8",  fri:"Zech 1-7",  sat:"Acts 15-16" },
+      { week:47, sun:"2 Peter",   mon:"Deut 16-19",tue:"Ezra 6-10",     wed:"Ps 134-136",thu:"Eccl 9-10", fri:"Zech 8-14", sat:"Acts 17-18" },
+      { week:48, sun:"1 John 1-3",mon:"Deut 20-22",tue:"Neh 1-4",       wed:"Ps 137-139",thu:"Eccl 11-12",fri:"Malachi",   sat:"Acts 19-20" },
+      { week:49, sun:"1 John 4-5",mon:"Deut 23-25",tue:"Neh 5-9",       wed:"Ps 140-142",thu:"Song 1-2",  fri:"Rev 1-6",   sat:"Acts 21-22" },
+      { week:50, sun:"2 John",    mon:"Deut 26-28",tue:"Neh 10-13",     wed:"Ps 143-145",thu:"Song 3-4",  fri:"Rev 7-11",  sat:"Acts 23-24" },
+      { week:51, sun:"3 John",    mon:"Deut 29-31",tue:"Esther 1-5",    wed:"Ps 146-148",thu:"Song 5-6",  fri:"Rev 12-17", sat:"Acts 25-26" },
+      { week:52, sun:"Jude",      mon:"Deut 32-34",tue:"Esther 6-10",   wed:"Ps 149-150",thu:"Song 7-8",  fri:"Rev 18-22", sat:"Acts 27-28" }
+    ];
+
+    // 3. Inject Rows
+    const tableBody = document.getElementById('table-body');
+    
+    if (tableBody) {
+      readingPlan.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="week-num">${row.week}</td>
+          <td>${row.sun}</td>
+          <td>${row.mon}</td>
+          <td>${row.tue}</td>
+          <td>${row.wed}</td>
+          <td>${row.thu}</td>
+          <td>${row.fri}</td>
+          <td>${row.sat}</td>
+        `;
+        tableBody.appendChild(tr);
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statement of Faith</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="New Life Church" class="logo-img">
+      </a>
+    </div>
+
+    <div class="hamburger" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav>
+      <ul class="nav-links" id="nav-list">
+        <li><a href="index.html">Back to Home</a></li>
+        
+        
+      </ul>
+    </nav>
+  </header>
+  <style>
+    /* --- INTERNAL STYLES FOR HEADER & TABLE --- */
+
+    /* 1. LEFT ALIGNED BANNER */
+    .reading-banner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 80px; 
+    }
+
+    .header-content {
+      max-width: 800px;
+      z-index: 2;
+    }
+
+    .header-content h1 {
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      line-height: 1.1;
+    }
+
+    /* 2. COOL VERSE STYLE */
+    .verse-highlight {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      font-style: italic;
+      border-left: 4px solid #FFD700; /* Gold Bar */
+      padding-left: 20px;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.3);
+      padding: 15px 20px;
+      border-radius: 0 10px 10px 0;
+      display: inline-block;
+    }
+
+    .verse-highlight span {
+      display: block;
+      margin-top: 10px;
+      color: #FFD700;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Mobile Header Adjustments */
+    @media (max-width: 768px) {
+      .reading-banner {
+        justify-content: center;
+        text-align: center;
+        padding-top: 100px;
+      }
+      .verse-highlight {
+        text-align: left;
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <section class="faith-full-section">
+    <div class="faith-full-content">
+      <h1>What We Believe</h1>
+      <div class="title-decoration"></div> 
+      
+      <p class="faith-subtitle">
+        The following statements represent the fundamental beliefs upon which our
+        church stands, grounded in Scripture and centered on Jesus Christ.
+      </p>
+
+      <div class="faith-points">
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 1 | The Trinity </span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The one true and living God, who eternally exists in three persons in unity: Father, Son and Holy Spirit.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 2 | The Scripture</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The divine Inspiration and authority of Holy Scripture.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 3 | Salvation</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The Original perfection of creation; the inherent corruptness of humanity through the fall; the necessity of repentance and regeneration by Grace and through faith in Christ alone, and the eternal separation from God of the finally unrepentant.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 4 | The Work of Christ</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The virgin birth, sinless life, atoning death, triumphant finished work of Christ, their security as they remain in Him and their future resurrection in an incorruptible body.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 5 | Justification</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The justification and sanctification of believers through the finished work of Christ, their security as they remain in Him and their future resurrection in an incorruptible body.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 6 | The Sacraments</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The Sacraments of Baptism by immersion and of the Lord's Supper.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 7 | Baptism of the Holy Spirit</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The Baptism of the Holy Spirit for the believers with supernatural sign empowering the Church for its mission in the world.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 8 | Spiritual Gifts</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The gifts of the Holy Spirit for the building up of the Church and ministry to the world.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 9 | Church Leadership</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              Christ's leadership of the Church through Apostles, Prophets, Evangelists, Pastors, Teachers and Elders for the unity, maturity and growth of the Church.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span class="header-text">Article 10 | Stewardship</span>
+            <span class="icon"></span>
+          </button>
+          <div class="accordion-body">
+            <div class="body-content">
+              The privilege and responsibility of wise stewardship of the entirely that God has given, including the practice of tithes and offerings to the local church.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const accordions = document.querySelectorAll('.accordion-header');
+
+    accordions.forEach(acc => {
+      acc.addEventListener('click', function() {
+        // Toggle the active class on the button
+        this.classList.toggle('active');
+
+        // Toggle the body
+        const body = this.nextElementSibling;
+        
+        if (body.style.maxHeight) {
+          // If open, close it
+          body.style.maxHeight = null;
+        } else {
+          // If closed, open it (set height to scrollHeight)
+          body.style.maxHeight = body.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

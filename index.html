@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>NEW LIFE CHURCH</title>
+</head>
+<body>
+    <script>
+  // Emergency fix for text overflow on mobile
+  document.addEventListener('DOMContentLoaded', function() {
+    // Force text wrapping on problematic paragraphs
+    const paragraphs = document.querySelectorAll('.pastor1-text p, .pastor-text p');
+    paragraphs.forEach(p => {
+      p.style.wordBreak = 'break-word';
+      p.style.overflowWrap = 'break-word';
+      p.style.maxWidth = '100%';
+    });
+    
+    // Log any elements causing overflow
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach(el => {
+      if (el.scrollWidth > document.documentElement.clientWidth) {
+        console.log('Overflow element:', el, el.className);
+        el.style.maxWidth = '100%';
+        el.style.overflowX = 'hidden';
+      }
+    });
+  });
+</script>
+<section class="hero-section">
+  
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="images/welcome-video.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <header class="navbar">
+  
+  <div class="logo">
+    <a href="#">
+      <img src="logo.png" alt="New Life Church" class="logo-img">
+    </a>
+  </div>
+
+  <div class="hamburger" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <nav>
+    <ul class="nav-links" id="nav-list">
+      <li><a href="#">Home</a></li>
+      
+      <li class="dropdown">
+        <a href="#" class="dropbtn">About <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#about">Who We Are</a>
+          <a href="statement-of-faith.html">What We Believe</a>
+          <a href="#vision">Our Vision</a>
+        </div>
+      </li>
+
+      <li><a href="#services">SERVICE TIMINGS</a></li>
+      <li><a href="#watch">WATCH</a></li>
+      <li><a href="bible-reading.html">BIBLE READING</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+  
+
+</header>
+
+  <div class="hero-content">
+    <h5 class="welcome-text">Welcome to New Life Church</h5>
+    <h1 class="main-headline">Rooted in the Word;<br>Growing in Faith.</h1>
+    
+    <div class="hero-buttons">
+      <a href="#services" class="primary-hero-btn">Plan A Visit</a>
+      <a href="#about" class="secondary-hero-btn">
+        More About Us <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+ 
+  <script src="script.js"></script>
+  
+
+    <section id="home" class="home-section">
+        
+    <div class="home-wrapper">
+
+        
+
+
+
+        <!-- RIGHT: Text -->
+        <div class="home-text">
+            <h4>WELCOME TO OUR CHURCH</h4>
+            <h1>New Life Church, Avadi</h1>
+            <p>
+                A Christ-centered church, with a rich legacy of over 64 years, rooted in faith, worship, and prayer.
+                Led by Pastor Jacob Koshy, we are a loving <br>community committed to sharing God's word, growing together in faith, and reflecting His love to all.
+                At the heart of our faith is the belief that God’s love is unchanging and available to all. We hold the teachings of the Bible as the foundation for our lives and seek to follow Christ’s example in everything we do. Our services, ministries, and programs are designed to nurture spiritual growth and encourage lifelong discipleship.
+                We are more than just a church; we are a family. Here, you will find people who care, support one another, and walk alongside each other in life’s joys and challenges. From children to seniors, newcomers to long-time members, we welcome you to join us in worship, service, and fellowship.
+                 
+            </p>
+            <a href="#services" class="home-btn">Join us for Worship</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="vision" class="vision-section">
+  <div class="vision-boat">
+
+    <!-- LEFT SIDE (TEXT + SLIDER) -->
+    <div class="vision-left">
+
+      <div class="vision-content">
+        <h5>OUR VISION</h5>
+        <h2>To see people passionately devoted to God.</h2>
+        <p>
+          Our vision is to see people passionately devoted to God, living lives transformed by the power of the Holy Spirit. We desire to build a Christ-centered community rooted in worship, prayer, and the teaching of God’s Word, where every individual grows in faith, discovers their God-given purpose, and walks daily in His love. Through obedience to Scripture and the leading of the Holy Spirit, we seek to impact families, communities, and<br>
+          generations for the glory of God.
+        </p>
+      </div>
+
+      <div class="vision-slider">
+        <div class="vision-track">
+          <img src="images/v1.jpg">
+          <img src="images/v2.jpg">
+          <img src="images/v3.jpg">
+          <img src="images/v4.jpg">
+          
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (CARDS) -->
+    <div class="vision-right">
+
+      <div class="vision-card worship">
+        <img src="images/worship.jpg">
+        <div class="card-overlay">
+          <span>WORSHIP</span>
+          <h3>Enter His courts with Praise</h3>
+        </div>
+      </div>
+
+      <div class="vision-card kids">
+        <img src="images/kids.jpg">
+        <div class="card-overlay">
+          <span>PRAYER</span>
+          <h3>Prayer brings Victory</h3>
+        </div>
+      </div>
+
+      <div class="vision-card community">
+        <img src="images/community.jpg">
+        <div class="card-overlay">
+          <span>WORD</span>
+          <h3>Light to our path</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="about" class="about-bg-section">
+  <div class="about-bg-overlay"></div>
+
+  <div class="about-bg-content">
+    <div class="about-text-card">
+      <h5>ABOUT OUR CHURCH</h5>
+      <h2>New Life Church</h2>
+
+      <p>
+        Our Church is a Christ-centered community built on faith, prayer and the
+        unchanging Word of God. Established over 60 years ago, our church stands
+        as a living testimony to God’s faithfulness across generations.
+         What began as a small step of obedience has grown into a spiritual home
+        where believers gather to worship, grow and serve together as one body
+        in Christ.
+      
+        Through every season, God has been our strength, guide and provider.
+      </p>
+
+      <span class="pastor-quote">One body in Christ </span>
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="pastor-section">
+    <div class="pastor-wrapper">
+
+        <!-- LEFT : TEXT -->
+        <div class="pastor-text">
+            <h2>Senior Pastor</h2>
+            <h3>Pr. JACOB KOSHY</h3>
+
+            <p>
+                Pastor K.G. Koshy founded the church in Nov 1 1961. After his death in 1995, 
+                Pastor Jacob Koshy is serving as the Senior Pastor of New Life Church, Avadi. He completed his Bible Studies in Elim Bible College, USA. 
+                He is a devoted servant of God, who leads the church with faith, humility, and a deep passion for prayer and the word of God.
+                With over 34 years of pastoral Service, he has been shepherding the church with unwavering faith, humility, and a deep commitment to the word of God.
+                Through his leadership, the church has grown spiritually while remaining rooted in its strong foundation and values passed down through generations.
+            </p>
+
+            
+        </div>
+
+        <!-- RIGHT : IMAGE -->
+        <div class="pastor-image-box">
+            <img src="pastor.jpg" alt="Senior Pastor">
+        </div>
+
+    </div>
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statement of Faith Intro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section class="faith-intro-section">
+  <div class="faith-container">
+    
+    <div class="faith-intro-content">
+      <h5>WHAT WE BELIEVE</h5>
+      <h2>Our Statement of Faith</h2>
+      <p>
+        Our Statement of Faith expresses the core biblical truths that define who we are
+        and what we believe. These foundational principles guide our worship, teaching,
+        and daily walk with Christ, rooted firmly in the Word of God.
+      </p>
+
+      <a
+        href="statement-of-faith.html"
+        target="_blank"
+        class="faith-btn"
+      >
+        Read Our Statement of Faith
+      </a>
+    </div>
+
+    <div class="faith-scripture-side">
+      <div class="scripture-box">
+        <p class="verse-text">
+          "Now faith is confidence in what we hope for and assurance about what we do not see."
+        </p>
+        <p class="verse-ref">HEBREWS 11:1</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
+
+<section class="watch-intro">
+  <div class="watch-intro-content">
+    <span class="watch-eyebrow">MISSED A SUNDAY?</span>
+    <h1>Watch the Message Online</h1>
+    <p>Catch up on our latest sermons and experience God’s Word anytime, anywhere.</p>
+    <a href="#watch" class="watch-btn">Watch the Sermons</a>
+  </div>
+
+  <div class="custom-shape-divider-bottom">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 1200 120"
+       preserveAspectRatio="none">
+    <path
+      d="M0,40 C150,100 350,0 600,30
+         C850,60 1000,120 1200,40
+         L1200,120 L0,120 Z"
+      class="shape-fill">
+    </path>
+  </svg>
+</div>
+
+</section>
+
+
+
+
+<section id="watch" class="watch-section">
+  <h2>Latest Messages</h2>
+
+  <div class="watch-grid">
+
+    <a href="https://www.youtube.com/watch?v=NY93ANb-zes" target="_blank" class="watch-card">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/NY93ANb-zes/hqdefault.jpg" alt="Jesus changes us part-05">
+        <span class="play-btn">▶</span>
+      </div>
+      <div class="watch-content">
+        <h3>Jesus Changes Us – Part 05</h3>
+        <span class="date">January 2026</span>
+        <p>The change in the life of a rich man, Zaccheus</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=sflZBwfvFqA" target="_blank" class="watch-card">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/sflZBwfvFqA/hqdefault.jpg" alt="Jesus changes us part-04">
+        <span class="play-btn">▶</span>
+      </div>
+      <div class="watch-content">
+        <h3>Jesus Changes Us – Part 04</h3>
+        <span class="date">January 2026</span>
+        <p>Life-changing moment in the lives of John and James</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=7V6OSNnp7i0" target="_blank" class="watch-card">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/7V6OSNnp7i0/hqdefault.jpg" alt="Jesus changes us part-03">
+        <span class="play-btn">▶</span>
+      </div>
+      <div class="watch-content">
+        <h3>Jesus Changes Us – Part 03</h3>
+        <span class="date">December 2025</span>
+        <p>How Jesus changed the life of the arrogant Peter</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=AMZrO5QAp-g" target="_blank" class="watch-card">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/AMZrO5QAp-g/hqdefault.jpg" alt="Jesus changes us part-02">
+        <span class="play-btn">▶</span>
+      </div>
+      <div class="watch-content">
+        <h3>Jesus Changes Us – Part 02</h3>
+        <span class="date">December 2025</span>
+        <p>Understanding God's purpose and calling for our lives.</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=0llYkVyyF5c" target="_blank" class="watch-card">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/0llYkVyyF5c/hqdefault.jpg" alt="Jesus changes us part-01">
+        <span class="play-btn">▶</span>
+      </div>
+      <div class="watch-content">
+        <h3>Jesus Changes Us – Part 01</h3>
+        <span class="date">December 2025</span>
+        <p>An introduction to the life-changing journey with Jesus.</p>
+      </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=JLUSeWTjaBc" target="_blank" class="watch-card">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/JLUSeWTjaBc/hqdefault.jpg" alt="Jesus changes us part-01">
+        <span class="play-btn">▶</span>
+      </div>
+      <div class="watch-content">
+        <h3>The consistency</h3>
+        <span class="date">November 2025</span>
+        <p>What are the benefits of doing something consistently in biblical point of view</p>
+      </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=Hxn_5TGeSXI" target="_blank" class="watch-card">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/Hxn_5TGeSXI/hqdefault.jpg" alt="Jesus changes us part-01">
+        <span class="play-btn">▶</span>
+      </div>
+      <div class="watch-content">
+        <h3>Complete the Vision given by God</h3>
+        <span class="date">November 2025</span>
+        <p>God has given a vision to everybody. It is time for us to arise and bring it to completion</p>
+      </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=hy-vCFuOvPc" target="_blank" class="watch-card">
+      <div class="thumb">
+        <img src="https://img.youtube.com/vi/hy-vCFuOvPc/hqdefault.jpg" alt="Jesus changes us part-01">
+        <span class="play-btn">▶</span>
+      </div>
+      <div class="watch-content">
+        <h3>The Word, The Life</h3>
+        <span class="date">September 2025</span>
+        <p>Man shall not live by bread alone; but by every word that comes from the Lord</p>
+      </div>
+    </a>
+    
+
+
+  </div>
+  
+</section>
+
+
+<section id="services" class="services-section">
+  
+  <div class="services-container">
+
+    <div class="services-info">
+      <div class="sticky-wrapper">
+        <h5 class="sub-title">JOIN US</h5>
+        <h2>Worship Services</h2>
+        
+        <blockquote class="bible-verse">
+          “Come, let us bow down in worship, let us kneel before the Lord our Maker.”
+          <span>– Psalm 95:6</span>
+        </blockquote>
+
+        <div class="description">
+          <p>
+            In our Church, we focus on Worship, Word, and Prayer. Our services are designed to inspire hearts, strengthen faith, and encourage spiritual growth.
+          </p>
+          <p>
+            Whether you are new to the faith or a lifelong believer, you are warmly welcomed to join us in lifting our hearts to God.
+          </p>
+          
+          <p class="invite-text">
+            Join our worship services! Let us magnify the name of the Lord together in His House!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="card-time">Sunday Morning</div>
+        <h3>4 Services</h3>
+        <p>5:00 AM • 6:30 AM • 8:00 AM • 9:15 AM</p>
+      </div>
+
+      <div class="service-card">
+        <div class="card-time">Sunday Evening</div>
+        <h3>Bilingual Service</h3>
+        <p>English & Tamil • 6:30 PM</p>
+      </div>
+
+      <div class="service-card">
+        <div class="card-time">Tuesday</div>
+        <h3>Prayer Service</h3>
+        <p>6:15 PM</p>
+      </div>
+
+      <div class="service-card">
+        <div class="card-time">Saturday</div>
+        <h3>Bible Study</h3>
+        <p>6:15 PM</p>
+      </div>
+
+      <div class="service-card">
+        <div class="card-time">2nd Saturday</div>
+        <h3>Youth Fellowship</h3>
+        <p>10:00 AM – 12:00 PM</p>
+      </div>
+
+      <div class="service-card">
+        <div class="card-time">1st of Month</div>
+        <h3>Promise Service</h3>
+        <p>5:00 AM – 6:30 AM</p>
+      </div>
+
+      <div class="service-card">
+        <div class="card-time">Sunday School</div>
+        <h3>Children's Bible School</h3>
+        <p>4:00 PM</p>
+      </div>
+
+      <div class="service-card highlight-card">
+        <div class="card-time">Online</div>
+        <h3>Live Stream</h3>
+        <p>Every Sunday • 12:00 PM</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="communion-wrapper">
+    <div class="communion-card">
+      <h3>Holy Communion</h3>
+      <p>Given in the <strong>2nd Sunday</strong> of every Month and in every <strong>Sunday Evening</strong> Service.</p>
+    </div>
+  </div>
+
+</section>
+<script>
+const video = document.querySelector('.hover-video');
+
+video.addEventListener('mouseover', () => {
+    video.play();
+});
+
+video.addEventListener('mouseout', () => {
+    video.pause();
+});
+</script>
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+
+    <div class="section-title-box">
+      <h5>GET IN TOUCH</h5>
+      <h2>CONTACT INFO</h2>
+      <div class="gold-divider-center"></div>
+    </div>
+
+    <div class="contact-cards-row">
+      
+      <div class="info-card">
+        <div class="icon-box">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Our Address</h3>
+        <p>#04, Gandhi Street, Nandhavanamettur, <br>Avadi, Chennai - 600071</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-box">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <p><a href="mailto:pastorjacobkoshy@hotmail.com">pastorjacobkoshy@hotmail.com</a></p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-box">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h3>Call Us</h3>
+        <p><a href="tel:+919841675535">+91 9841675535</a></p>
+      </div>
+
+    </div>
+
+    <div class="content-split-row">
+      
+      <div class="map-wrapper">
+         <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.7189720162573!2d80.09302627539375!3d13.11698128721197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5289d5b45089c1%3A0x76eecb7a6b43d409!2sNew%20Life%20Church!5e0!3m2!1sen!2sin!4v1767024446532!5m2!1sen!2sin"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      </div>
+
+      <div class="church-info-card">
+        <div class="church-text-content">
+          <h3>Visit Our Church</h3>
+          <p>We warmly welcome you to worship with us and experience God's presence at New Life Church.</p>
+        </div>
+        
+        <div class="church-img-container">
+          <img src="church.jpg" alt="New Life Church Building">
+        </div>
+
+        <a href="https://www.google.com/maps" target="_blank" class="directions-btn">
+          Get Directions <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="social-footer">
+      <p>Follow us on</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/newlife_ministries_official?igsh=NnVuOGFsZ2M2N3I4" target="_blank" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/17dU9Ld3Ef/" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@pastorjacobkoshy" target="_blank" class="social-icon yt"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const track = document.querySelector(".vision-track");
+  const slider = document.querySelector(".vision-slider");
+
+  function updateVisionMove() {
+    const move =
+      slider.offsetWidth - track.scrollWidth;
+
+    track.style.setProperty("--move", move + "px");
+  }
+
+  window.addEventListener("load", updateVisionMove);
+  window.addEventListener("resize", updateVisionMove);
+</script>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-col about-col">
+      <h3>New Life Church</h3>
+      <p class="footer-tagline">
+        Grounded in Scripture,<br>Centered on Christ.
+      </p>
+      
+      <div class="footer-social-icons">
+        <a href="https://www.instagram.com/newlife_ministries_official?igsh=NnVuOGFsZ2M2N3I4" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/17dU9Ld3Ef/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@pastorjacobkoshy" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col links-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Worship Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col contact-col">
+      <h4>Find Us</h4>
+      <p><i class="fas fa-map-marker-alt"></i> New Life Church, Avadi</p>
+      <p><i class="fas fa-envelope"></i> pastorjacobkoshy@hotmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 9841675535</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> New Life Church. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+  const hamburger = document.getElementById('mobile-menu');
+  const navList = document.getElementById('nav-list');
+
+  hamburger.addEventListener('click', () => {
+    // Toggle the menu visibility
+    navList.classList.toggle('active');
+    // Toggle the X animation on the icon
+    hamburger.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
