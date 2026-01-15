@@ -3892,7 +3892,7 @@ img[style*="height"] {
 .about-bg-section {
   position: relative;
   min-height: 90vh;
-  background: url("images/church1.jpg") center/cover no-repeat;
+  background: url("church1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
 }
@@ -6231,4 +6231,5 @@ nav, .nav-links {
   font-size: 0.9rem;
   color: #888;
   font-style: italic;
+
 }
